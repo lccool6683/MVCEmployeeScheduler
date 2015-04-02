@@ -1,0 +1,93 @@
+﻿@model  MVCEmployeeScheduler.Models.OffDay
+
+@{
+    ViewBag.Title = "Enter Off Days";
+}
+
+<h2>Enter Off Days</h2>
+<p>
+    @Html.ActionLink("View/Edit Off Days", "../OffDaysForm")
+</p>
+<p>
+    @Html.ActionLink("Manage Schedules", "../schedule")
+</p>
+
+
+<form id="offDaysForm" action="/OffDaysForm/SubmitOffDays" method="post">
+    <p>
+        EmpId:
+        <br />
+        @Html.TextBox("EmpId")
+    </p>
+    <p>
+        Date From:
+        <br />
+        @Html.TextBox("dateFrom", null, new { id = "datepicker", @class = "text-field" })
+    </p>
+    <p>
+        Date To:
+        <br />
+        @Html.TextBox("dateTo", null, new { id = "datepicker2", @class = "text-field" })
+    </p>
+    <p>
+        Time From:
+        <br />
+        @Html.TextBox("timeFrom", null, new { id = "ptTimeSelect", @class = "text" })
+    </p>
+    <p>
+        Time To:
+        <br />
+        @Html.TextBox("timeTo", null, new { id = "ptTimeSelect2", @class = "text" })
+    </p>
+    <p>
+        Description:
+        <br />
+        @Html.TextBox("Description")
+    </p>
+    <input type="button" value="Save" id="Save" />
+    <span id="msg" style="color:red;" />
+</form>
+@section Scripts{
+    <script type="text/javascript">
+        $('#Save').click(function () {
+            var form = $("#offDaysForm");
+            var url = form.attr("action");
+            var formData = form.serialize();
+            $.post(url, formData, function (data) {
+                $("#msg").html(data);
+            });
+        })
+    </script>
+}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Datepicker - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+
+    <link href="~/Scripts/jquery.ptTimeSelect.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.ptTimeSelect.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+        $(function () {
+            $("#datepicker2").datepicker();
+        });
+
+        $(function () {
+            $("#ptTimeSelect").ptTimeSelect();
+        });
+
+        $(function () {
+            $("#ptTimeSelect2").ptTimeSelect();
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Movies" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=JAMES-PC\SQLEXPRESS;Initial Catalog=staff;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MovieDBContext" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Events" Member="Events">
+    <Type Name="Event">
+      <Column Name="taskid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="staffid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="clientid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="text" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="category" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="start_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="end_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_Event" Member="Staff" ThisKey="staffid" OtherKey="staffid" Type="Staff" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staff" Member="Staffs">
+    <Type Name="Staff">
+      <Column Name="staffid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="firstname" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="lastname" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="position" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Staff_Event" Member="Events" ThisKey="staffid" OtherKey="staffid" Type="Event" />
+    </Type>
+  </Table>
+</Database>

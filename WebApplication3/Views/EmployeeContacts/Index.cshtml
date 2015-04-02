@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MVCEmployeeScheduler.Models.EmployeeContacts>
+
+@{
+    ViewBag.Title = "Employee Contact Information";
+}
+
+<h2>Employee Details</h2>
+
+@Html.ActionLink("Back", "../Employees/Index") 
+@Html.ActionLink("Add New Contact Information", "Create")
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostalCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreetAddress)
+        </td>
+        <td>
+            @Html.ActionLink("Update", "Edit", new { id = item.EmployeeID }) |
+            @Html.ActionLink("Specifications", "Details", new { id = item.EmployeeID }) |
+            @*@Html.ActionLink("Remove", "Delete", new { id = item.EmployeeID })*@
+        </td>
+    </tr>
+}
+
+</table>

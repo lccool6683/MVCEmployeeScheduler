@@ -1,0 +1,645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3E609420-64B6-4D87-AF03-1E64A40AD2EA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication3</RootNamespace>
+    <AssemblyName>WebApplication3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DHTMLX, Version=3.2.5504.26689, Culture=neutral, PublicKeyToken=53f24791214eb8ac, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DHTMLX.Scheduler.NET.3.2.0.2\lib\DHTMLX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contexts\EmergencyContactsContext.cs" />
+    <Compile Include="Contexts\EmployeeContactsContext.cs" />
+    <Compile Include="Contexts\EmployeeQualificationsContext.cs" />
+    <Compile Include="Contexts\EmployeesContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\BranchesController.cs" />
+    <Compile Include="Controllers\CalendarController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\EmergencyContactController.cs" />
+    <Compile Include="Controllers\EmployeeContactsController.cs" />
+    <Compile Include="Controllers\EmployeeQualificationsController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\loginController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\OffDaysController.cs" />
+    <Compile Include="Controllers\OffDaysFormController.cs" />
+    <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Controllers\ServiceTypesController.cs" />
+    <Compile Include="Logic\ExceptionUtility.cs" />
+    <Compile Include="Models\Branches.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\EmergencyContact.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\EmployeeContacts.cs" />
+    <Compile Include="Models\EmployeeQualifications.cs" />
+    <Compile Include="Models\Events.cs" />
+    <Compile Include="Models\Model1.Context.cs" />
+    <Compile Include="Models\Model1.Context1.cs" />
+    <Compile Include="Models\Model1.Context2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs" />
+    <Compile Include="Models\Model1.designer.cs">
+      <DependentUpon>Model1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model11.cs" />
+    <Compile Include="Models\Model11.Designer.cs">
+      <DependentUpon>Model11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model12.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model2.Context.cs" />
+    <Compile Include="Models\Model2.Context1.cs" />
+    <Compile Include="Models\Model2.Context2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model2.cs" />
+    <Compile Include="Models\Model2.designer.cs">
+      <DependentUpon>Model2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model21.cs" />
+    <Compile Include="Models\Model21.Designer.cs">
+      <DependentUpon>Model21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model22.cs" />
+    <Compile Include="Models\Model22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model23.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OffDay.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OffDays.cs" />
+    <Compile Include="Models\ScheduleModel.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SchedulerModel.cs" />
+    <Compile Include="DataAccess\UserController.cs" />
+    <Compile Include="DataAccess\DAL.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\loginModel.cs" />
+    <Compile Include="Models\CRMDBContext.cs" />
+    <Compile Include="Models\Service.cs" />
+    <Compile Include="Models\ServiceType.cs" />
+    <Compile Include="Models\Shift.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ErrorLog.txt" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="dhxscheduler.sample.mvc3.readme.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context2.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model12.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model12.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model2.Context2.cs</LastGenOutput>
+    </Content>
+    <EntityDeploy Include="Models\Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model22.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model23.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler.css" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler.js" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_classic.css" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_custom_lightbox.js" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_flat.css" />
+    <Content Include="Scripts\dhtmlxScheduler\dhtmlxscheduler_glossy.css" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_container_autoresize.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_drag_between.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_grid_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_layer.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_live_updates.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_monthheight.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_multisection.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_mvc.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_quick_info.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_timeline.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_treetimeline.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_units.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_url.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_week_agenda.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_wp.js" />
+    <Content Include="Scripts\dhtmlxScheduler\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\buttons.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\calendar.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\controls.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\databg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\databg_now.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\export_ical.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\icon.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\images.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\loading.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\controls.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\databg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\export_ical.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_dhx_terrace\resizing.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\agenda_bg.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\arrow_left.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\arrow_right.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\calendar.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\clock.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\clock_big.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\clock_small.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\close_icon.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\controls.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\databg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\databg_now.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\export_ical.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\resize_dots.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_flat\resizing.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\blue_tab.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\blue_tab_wide.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\buttons.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\but_repeat.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\calendar.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\clock_big.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\clock_small.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\collapse_expand_icon.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\controlls5.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\databg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\databg_now.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\event-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\export_ical.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\export_pdf.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\icon.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\left-separator.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\left-time-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\lightbox.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\loading.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\move.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\multi-days-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\second-top-days-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\top-days-bg.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\top-separator.gif" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\white_tab.png" />
+    <Content Include="Scripts\dhtmlxScheduler\imgs_glossy\white_tab_wide.png" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_ar.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_be.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_ca.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_cn.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_cs.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_da.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_de.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_el.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_en.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_es.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_fi.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_fr.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_he.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_hu.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_id.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_it.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_jp.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_nb.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_nl.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_no.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_pl.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_pt.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_ro.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_ru.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_si.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_sk.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_sv.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_tr.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\locale_ua.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_be.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_cn.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_cs.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_da.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_de.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_el.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_en.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_es.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_fi.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_fr.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_it.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_nb.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_nl.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_pl.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_pt.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_ro.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_ru.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_sk.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_sv.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\locale_recurring_ua.js" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_be.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_cn.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_de.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_el.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_en.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_es.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_fr.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_it.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_nl.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_ro.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_ru.html" />
+    <Content Include="Scripts\dhtmlxScheduler\locale\recurring\repeat_template_sk.html" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.ptTimeSelect.css" />
+    <Content Include="Scripts\jquery.ptTimeSelect.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\login\index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Calendar\Index.cshtml" />
+    <Content Include="Views\OffDays\Index.cshtml" />
+    <Content Include="Views\Events\Create.cshtml" />
+    <Content Include="Views\Events\Delete.cshtml" />
+    <Content Include="Views\Events\Details.cshtml" />
+    <Content Include="Views\Events\Edit.cshtml" />
+    <Content Include="Views\Events\Index.cshtml" />
+    <Content Include="Views\OffDaysForm\Create.cshtml" />
+    <Content Include="Views\OffDaysForm\Delete.cshtml" />
+    <Content Include="Views\OffDaysForm\Details.cshtml" />
+    <Content Include="Views\OffDaysForm\Edit.cshtml" />
+    <Content Include="Views\OffDaysForm\Index.cshtml" />
+    <Content Include="Views\Branches\Create.cshtml" />
+    <Content Include="Views\Branches\Delete.cshtml" />
+    <Content Include="Views\Branches\Details.cshtml" />
+    <Content Include="Views\Branches\Edit.cshtml" />
+    <Content Include="Views\Branches\Index.cshtml" />
+    <Content Include="Views\EmergencyContact\Create.cshtml" />
+    <Content Include="Views\EmergencyContact\Delete.cshtml" />
+    <Content Include="Views\EmergencyContact\Details.cshtml" />
+    <Content Include="Views\EmergencyContact\Edit.cshtml" />
+    <Content Include="Views\EmergencyContact\Index.cshtml" />
+    <Content Include="Views\EmployeeContacts\Create.cshtml" />
+    <Content Include="Views\EmployeeContacts\Delete.cshtml" />
+    <Content Include="Views\EmployeeContacts\Details.cshtml" />
+    <Content Include="Views\EmployeeContacts\Edit.cshtml" />
+    <Content Include="Views\EmployeeContacts\Index.cshtml" />
+    <Content Include="Views\EmployeeQualifications\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Manager\Index.cshtml" />
+    <Content Include="Views\Schedule\Create.cshtml" />
+    <Content Include="Views\Schedule\Delete.cshtml" />
+    <Content Include="Views\Schedule\Details.cshtml" />
+    <Content Include="Views\Schedule\Edit.cshtml" />
+    <Content Include="Views\Schedule\Index.cshtml" />
+    <Content Include="Views\ServiceTypes\Create.cshtml" />
+    <Content Include="Views\ServiceTypes\Delete.cshtml" />
+    <Content Include="Views\ServiceTypes\Details.cshtml" />
+    <Content Include="Views\ServiceTypes\Edit.cshtml" />
+    <Content Include="Views\ServiceTypes\Index.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
+    <Content Include="Views\Client\Delete.cshtml" />
+    <Content Include="Views\Client\Details.cshtml" />
+    <Content Include="Views\Client\Edit.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Client\Invoice.cshtml" />
+    <Content Include="Views\Service\Create.cshtml" />
+    <Content Include="Views\Service\CreateInvoice.cshtml" />
+    <Content Include="Views\Service\Delete.cshtml" />
+    <Content Include="Views\Service\Details.cshtml" />
+    <Content Include="Views\Service\Edit.cshtml" />
+    <Content Include="Views\Service\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Backup\" />
+    <Folder Include="Views\Shift\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10411</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10411/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

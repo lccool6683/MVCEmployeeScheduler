@@ -1,0 +1,20 @@
+﻿@model MVCEmployeeScheduler.Models.Service
+
+@{
+    ViewBag.Title = "CreateInvoice";
+}
+
+<h2>CreateInvoice</h2>
+
+@using (Html.BeginForm())
+{
+    
+            <p>Client ID:</p>
+            <input type="text" name="guid"/>
+            <p>Begining:</p>
+            <input type="date" name="startDate" />
+            <p>Ending:</p>
+            <input type="date" name="endDate" /><br>
+            <input type="submit" value="Submit"/>
+
+}

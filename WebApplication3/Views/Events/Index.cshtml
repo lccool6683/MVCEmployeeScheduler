@@ -1,0 +1,135 @@
+﻿@model IEnumerable<MVCEmployeeScheduler.Models.Events>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Repeated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedOption)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedEvery)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedTimes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedMonday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedTuesday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedWednesday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedThursday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedFriday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedSaturday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RepeatedSunday)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualDuration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompleteDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Repeated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedOption)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedEvery)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedTimes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedMonday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedTuesday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedWednesday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedThursday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedFriday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedSaturday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RepeatedSunday)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompleteDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MVCEmployeeScheduler.Models.OffDaysDBContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OffDays">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateTimeFrom" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="DateTimeTo" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="EmpId" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="DateFrom" Type="varchar(max)" />
+          <Property Name="DateTo" Type="varchar(max)" />
+          <Property Name="TimeFrom" Type="varchar(max)" />
+          <Property Name="TimeTo" Type="varchar(max)" />
+        </EntityType>
+        <EntityContainer Name="MVCEmployeeSchedulerModelsOffDaysDBContextModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OffDays" EntityType="Self.OffDays" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MVCEmployeeScheduler.Models.OffDaysDBContextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="OffDay">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateTimeFrom" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="DateTimeTo" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="EmpId" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DateFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DateTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TimeFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TimeTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="OffDays" EntityType="Self.OffDay" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MVCEmployeeSchedulerModelsOffDaysDBContextModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="OffDays">
+            <EntityTypeMapping TypeName="MVCEmployeeScheduler.Models.OffDaysDBContextModel.OffDay">
+              <MappingFragment StoreEntitySet="OffDays">
+                <ScalarProperty Name="TimeTo" ColumnName="TimeTo" />
+                <ScalarProperty Name="TimeFrom" ColumnName="TimeFrom" />
+                <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+                <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="DateTimeFrom" ColumnName="DateTimeFrom" />
+                <ScalarProperty Name="DateTimeTo" ColumnName="DateTimeTo" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,50 @@
+﻿@model MVCEmployeeScheduler.Models.Schedules
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ScheduleModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTimeFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTimeFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTimeTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTimeTo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmpId }) |
+    @Html.ActionLink("Back to List", "Index", new { id = Model.EmpId })
+</p>

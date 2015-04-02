@@ -1,0 +1,72 @@
+﻿@model MVCEmployeeScheduler.Models.Schedules
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ScheduleModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index", new { id = Model.EmpId })
+        </div>
+    }
+</div>

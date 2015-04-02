@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MVCEmployeeScheduler.Models.EmployeeQualifications>
+
+@{
+    ViewBag.Title = "Employee Qualifications";
+}
+
+<h2>Qualifications</h2>
+@Html.ActionLink("Back", "../Employees/Index")
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Qualifications)
+        </th>
+        <th></th>
+    </tr>
+
+        @foreach (var item in Model)
+         {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qualifications)
+                </td>
+            </tr>
+        }
+</table>
+
+   

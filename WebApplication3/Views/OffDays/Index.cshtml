@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Scheduler | Multiple schedulers";
+    ViewBag.SampleTitle = "Multiple schedulers";
+    ViewBag.ShortDescription = "Several calendars can be created on single page";
+    ViewBag.LongDescription = "Each scheduler must have unique name. <br />";
+}
+
+<h2>Shifts</h2>
+<div style="height:400px">
+    @Html.Raw(Model.Sh1.Render())
+</div>
+<h2>Off Days</h2>
+<div style="height:400px">
+    @Html.Raw(Model.Sh2.Render())
+</div>
+

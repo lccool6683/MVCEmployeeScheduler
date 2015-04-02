@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ScheduleModels" EntityType="Model1.ScheduleModel" />
+  </EntityContainer>
+  <EntityType Name="ScheduleModel">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeFrom" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TimeTo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EmpId" Type="Int32" />
+    <Property Name="DateTimeTo" Type="DateTime" Precision="7" />
+    <Property Name="DateTimeFrom" Type="DateTime" Precision="7" />
+  </EntityType>
+</Schema>

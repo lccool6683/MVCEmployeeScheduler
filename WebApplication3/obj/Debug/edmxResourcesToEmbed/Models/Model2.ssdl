@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MVCEmployeeScheduler.Models.OffDaysDBContextModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OffDays">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateTimeFrom" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="DateTimeTo" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="EmpId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="DateFrom" Type="varchar(max)" />
+    <Property Name="DateTo" Type="varchar(max)" />
+    <Property Name="TimeFrom" Type="varchar(max)" />
+    <Property Name="TimeTo" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="MVCEmployeeSchedulerModelsOffDaysDBContextModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OffDays" EntityType="Self.OffDays" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

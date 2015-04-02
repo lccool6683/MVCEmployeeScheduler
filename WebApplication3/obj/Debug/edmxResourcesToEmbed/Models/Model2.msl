@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MVCEmployeeSchedulerModelsOffDaysDBContextModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="OffDays">
+      <EntityTypeMapping TypeName="MVCEmployeeScheduler.Models.OffDaysDBContextModel.OffDay">
+        <MappingFragment StoreEntitySet="OffDays">
+          <ScalarProperty Name="TimeTo" ColumnName="TimeTo" />
+          <ScalarProperty Name="TimeFrom" ColumnName="TimeFrom" />
+          <ScalarProperty Name="DateTo" ColumnName="DateTo" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="DateTimeFrom" ColumnName="DateTimeFrom" />
+          <ScalarProperty Name="DateTimeTo" ColumnName="DateTimeTo" />
+          <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

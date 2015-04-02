@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MVCEmployeeScheduler.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employees</h2>
+
+<p>
+    @Html.ActionLink("Add New Employee", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StaffType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qualification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactInformation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmergencyContact)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StaffType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qualification)
+            @Html.ActionLink(item.Name + "'s Qualifications", "../EmployeeQualifications/Index", new { id = item.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactInformation)
+            @Html.ActionLink(item.Name + "'s Info", "../EmployeeContacts/Index", new { id = item.ID })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmergencyContact)
+            @Html.ActionLink(item.Name + "'s Contact", "../EmergencyContact/Index", new { id = item.ID })
+        </td>
+
+        <td>
+            @Html.ActionLink("Update", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Specifications", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Remove", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+@*<button onclick="location.href='@Html.Action("BackupDatabase")';return false;">BackupDatabase</button>
+<br />*@

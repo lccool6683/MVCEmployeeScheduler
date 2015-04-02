@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MVCEmployeeScheduler.Models.Branches>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Select Branch: @Html.DropDownList("ParentBranch", new SelectList(ViewBag.ParentBranch, "Text", "Value"))
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentBranch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParentBranch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Name }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Name }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Name })
+        </td>
+    </tr>
+}
+
+</table>

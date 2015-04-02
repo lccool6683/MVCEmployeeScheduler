@@ -1,0 +1,168 @@
+﻿@model MVCEmployeeScheduler.Models.Events
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tasks</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Repeated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Repeated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedOption)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedOption)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedEvery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedEvery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedTimes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedTimes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedMonday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedMonday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedTuesday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedTuesday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedWednesday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedWednesday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedThursday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedThursday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedFriday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedFriday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedSaturday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedSaturday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RepeatedSunday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RepeatedSunday)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ActualDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActualDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompleteDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompleteDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

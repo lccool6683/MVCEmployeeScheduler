@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Staff App</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="max-width: 9999px">
+        <div class="container" style="max-width: 9999px">
+            <div class="navbar-header" style="max-width: 9999px">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("MVC Employee Scheduler", "Index", "login", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse" style="max-width: 9999px">
+                <ul class="nav navbar-nav" style="max-width: 9999px">
+                    <li>@Html.ActionLink("Events", "Index", "Events")</li>
+                    <li>@Html.ActionLink("OffDays Manager", "Index", "OffDaysForm")</li>
+                    <li>@Html.ActionLink("OffDays Calendar", "Index", "OffDays")</li>
+                    <li>@Html.ActionLink("Branches", "Index", "Branches")</li>
+                    <li>@Html.ActionLink("Emergency Contacts", "Index", "EmergencyContact")</li>
+                    <li>@Html.ActionLink("Employee Contacts", "Index", "EmployeeContacts")</li>
+                    <li>@Html.ActionLink("Employee", "Index", "Employees")</li>
+                    <li>@Html.ActionLink("Clients", "Index", "Client")</li>
+                    <li>@Html.ActionLink("Services", "Index", "Service")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
